@@ -10,8 +10,11 @@ frequencies = [(u'知乎',5),(u'小段同学',4),(u'曲小花',3),(u'中文分�
 #frequencies = [('知乎'.decode('utf-8','ignore'),5),('小段同学'.decode('utf-8','ignore'),4),('曲小花'.decode('utf-8','ignore'),3),('中文分词'.decode('utf-8','ignore'),2),('样例'.decode('utf-8','ignore'),1)]
 
 # Generate a word cloud image 此处原为 text 方法，我们改用 frequencies
-#wordcloud = WordCloud().generate(text)
-wordcloud = WordCloud(font_path='G:\Windows\Fonts\msyh').fit_words(frequencies)
+# wordcloud = WordCloud().generate(text)
+# Windows
+# wordcloud = WordCloud(font_path='G:\Windows\Fonts\msyh').fit_words(frequencies)
+# Mac OS
+wordcloud = WordCloud(font_path='/System/Library/Fonts/STHeiti Light').fit_words(frequencies)
 
 # Display the generated image:
 # the matplotlib way:
